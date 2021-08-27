@@ -75,7 +75,7 @@ async def filter(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="–▫◽◻⬜Pages 1/1⬛◼◾▪",callback_data="pages")]
+                [InlineKeyboardButton(text="–▫◽◻⬜ Pages 1/1 ⬛◼◾▪",callback_data="pages")]
             )
             poster=None
             if API_KEY:
@@ -94,7 +94,7 @@ async def filter(client, message):
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f" –▫◽◻⬜Pages 1/{data['total']}⬛◼◾▪",callback_data="pages")]
+            [InlineKeyboardButton(text=f" –▫◽◻⬜ Pages 1/{data['total']} ⬛◼◾▪",callback_data="pages")]
         )
         poster=None
         if API_KEY:
@@ -139,13 +139,13 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text=" –▫◽◻⬜Pages 1/1⬛◼◾▪ ",callback_data="pages")]
+                [InlineKeyboardButton(text=" –▫◽◻⬜ Pages 1/1 ⬛◼◾▪ ",callback_data="pages")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query★.•°°•.★⁩⁩  {search} ‌‌‌‌★.•°°•.★⁩⁩ ‎ ­  ­ @AJmovieLINKS ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩  {search} ‌‌‌‌★.•°°•.★⁩⁩ ‎ ­  ­ @AJmovieLINKS ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
                 await message.reply_text(f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩  {search} ‌‌‌‌‎ ­ ★.•°°•.★⁩⁩  ­  ­@AJmovieLINKS  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
@@ -165,7 +165,7 @@ async def group(client, message):
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩ {search} ‌‌‌‌‎★.•°°•.★⁩⁩  ­  @AJmovieLINKS­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query★.•°°•.★⁩⁩  {search} ‌‌‌‌‎ ★.•°°•.★⁩⁩ ­ @AJmovieLINKS   ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩  {search} ‌‌‌‌‎ ★.•°°•.★⁩⁩ ­ @AJmovieLINKS   ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
