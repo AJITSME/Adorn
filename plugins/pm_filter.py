@@ -75,16 +75,16 @@ async def filter(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="–▫◽◻⬜Pages 1/1⬛◼◾▪",callback_data="pages")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩ {search} ‌‎★.•°°•.★⁩⁩ ­  ­ @AJmovieLINKS ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query★.•°°•.★⁩⁩ {search} ‌‎★.•°°•.★⁩⁩  ­ @AJmovieLINKS ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -94,15 +94,15 @@ async def filter(client, message):
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f" –▫◽◻⬜Pages 1/{data['total']}⬛◼◾▪",callback_data="pages")]
         )
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩ {search} ‌‌‌‌‎★.•°°•.★⁩⁩  ­  ­ @AJmovieLINKS ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query "★.•°°•.★⁩⁩ {search} ‌‎★.•°°•.★⁩⁩  ­  @AJmovieLINKS­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -139,15 +139,15 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text=" –▫◽◻⬜Pages 1/1⬛◼◾▪ ",callback_data="pages")]
             )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query★.•°°•.★⁩⁩  {search} ‌‌‌‌★.•°°•.★⁩⁩ ‎ ­  ­ @AJmovieLINKS ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩  {search} ‌‌‌‌‎ ­ ★.•°°•.★⁩⁩  ­  ­@AJmovieLINKS  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
             return
 
         data = BUTTONS[keyword]
@@ -157,15 +157,15 @@ async def group(client, message):
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"–▫◽◻⬜Pages 1/{data['total']}",callback_data="pages")]
         )
         poster=None
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query ★.•°°•.★⁩⁩ {search} ‌‌‌‌‎★.•°°•.★⁩⁩  ­  @AJmovieLINKS­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query★.•°°•.★⁩⁩  {search} ‌‌‌‌‎ ★.•°°•.★⁩⁩ ­ @AJmovieLINKS   ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -210,7 +210,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"–▫◽◻⬜ Pages {int(index)+2}/{data['total']} ⬛◼◾▪", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -224,7 +224,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"–▫◽◻⬜ Pages {int(index)+2}/{data['total']} ⬛◼◾▪", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -248,7 +248,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"–▫◽◻⬜ Pages {int(index)}/{data['total']} ⬛◼◾▪", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -262,7 +262,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"–▫◽◻⬜ Pages {int(index)}/{data['total']} ⬛◼◾▪", callback_data="pages")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -276,7 +276,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
                 ]
                 ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="<b>Developer : <a href='https://t.me/worldmoviesaj'>AJ</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
@@ -297,8 +297,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        
+                        InlineKeyboardButton('More Movies', url='https://t.me/worldmoviesaj')
                     ]
                     ]
                 
@@ -329,8 +329,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        
+                        InlineKeyboardButton('More Movies', url='https://t.me/worldmoviesaj')
                     ]
                     ]
                 
